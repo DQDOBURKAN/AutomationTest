@@ -64,7 +64,6 @@ public class Demo extends DriverSetUp {
         String myVoucherVerify = msedge.findElement(By.xpath("//*[contains(text(),'20MORE')]")).getText();
         /** verifying voucher exists */
         Assert.assertEquals(myVoucherVerify,a);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(text(),'20MORE')]/../td[1]/input[@type='checkbox']")));
         myActions.click(myVoucher1).perform();
         WebElement myVoucherDelete = msedge.findElement(By.xpath("//*[@data-original-title=\"Delete\"]"));
         myActions.click(myVoucherDelete).perform();
